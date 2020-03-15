@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(45deg, rgba(10, 0, 102, 0.6), rgba( 54, 0, 153, 0.5),
+                                           rgba(95, 1, 158, 0.7), rgba(161, 2, 201, 0.7)),
+                                            url(../img/bg-image.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.social-container {
+  position: fixed;
+  top: 50%;  left: 0;
+  width: 65px;
+  /* teste */
+  padding-top: 5px; padding-bottom: 5px;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.social-container input {
+  display: none;
+}
+
+.button-box {
+  position: relative;
+  transition: .4s;
+}
+
+.button-box label {
+  position: relative;
+  display: block;
+  width: 40px;  height: 40px;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 50%;
+  margin: 10px 0 5px 7px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.button-box label i {
+  position: absolute;
+  top: 50%;  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  transition: all .4s;
+  color: rgba(255, 255, 255, .8);
+}
+
+.social-box {
+  transition: all .3s;
+}
+
+.social-box a{
+  position: relative;
+  display: block;
+  height: 50px;  width: 50px;
+  background-color: teal;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.social-box a i {
+  position: absolute;
+  top: 50%;  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  transition: all .3s;
+  color: white;
+}
+
+.social-box a span {
+  position: relative;
+  display: block;
+  left: 20px;
+  height: 100%;
+  width: min-content;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 25px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  transition-delay: .1s;
+}
+
+.social-box a::before {
+  content: '';
+  position: absolute;
+  top: 0;  left: 30px;
+  width: 20px;  height: 100%;
+  background-color: teal;
+  transform: skew(0deg);
+  transition: .5s;
+}
+
+.social-box a span::before {
+  content: '';
+  position: absolute;
+  top: 0;  left: -11px;
+  width: 20px;  height: 100%;
+  background-color: teal;
+  transform: skew(-20deg);
+  border-left: solid 5px #c1c1c1;
+}
+
+.social-box a:hover::before {
+  transform: skew(-20deg);
+  left: 41px;
+}
+
+.social-box a:hover span {
+  visibility: visible;
+  opacity: 1;
+  left: 82px;
+}
+
+.social-box a:nth-of-type(1),
+.social-box a:nth-of-type(1)::before,
+.social-box a:nth-of-type(1) span,
+.social-box a:nth-of-type(1) span::before {
+  background-color: #0077b5;
+}
+
+.social-box a:nth-of-type(2),
+.social-box a:nth-of-type(2)::before,
+.social-box a:nth-of-type(2) span,
+.social-box a:nth-of-type(2) span::before {
+  background-color: #e1306c;
+}
+.social-box a:nth-of-type(3),
+.social-box a:nth-of-type(3)::before,
+.social-box a:nth-of-type(3) span,
+.social-box a:nth-of-type(3) span::before {
+  background-color: #3b5998;
+}
+
+.social-box a:nth-of-type(4),
+.social-box a:nth-of-type(4)::before,
+.social-box a:nth-of-type(4) span,
+.social-box a:nth-of-type(4) span::before {
+  background-color: #333;
+}
+
+.social-box a:nth-of-type(5),
+.social-box a:nth-of-type(5)::before,
+.social-box a:nth-of-type(5) span,
+.social-box a:nth-of-type(5) span::before {
+  background-color: #25d366;
+}
+
+#check:checked ~ .social-box {
+  transform: translateX(-100px);
+}
+
+#check:checked ~ .button-box{
+  /* background-color: rgba(0,0,0, .6); */
+  border-top-right-radius: 40px;  border-bottom-right-radius: 40px;
+}
+
+#check:checked ~ .button-box label{
+  transform: translateX(-26px);
+}
+
+#check:checked ~ .button-box:hover label {
+  transform: translateX(0);
+}
+
+#check:checked ~ .button-box label i {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
