@@ -2,7 +2,7 @@
   <p align="center">
     <img src="img/html.png" ></img>
   </p>
-  <h1>HTML5 e CSS3</h1>
+  <h1>Projeto com HTML5 e CSS3</h1>
   <p>
     Desenvolvimento criativo de Barra lateral <strong>Social Media Icons</strong>
     <br/>
